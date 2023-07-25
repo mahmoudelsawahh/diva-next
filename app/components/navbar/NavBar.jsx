@@ -26,19 +26,29 @@ export default function DrawerAppBar(props) {
       <>
          
          <Button variant='text'>
-                   <Link href="/" style={{color : '#333', width : '100%', height : '100%', }} className={currentRoute === "/" ? "active" : "no-active"}>الرئيسية</Link>
+                   <Link href="/" style={{color : '#333', width : '100%', height : '100%', }} className={currentRoute === "/" ? "active" : "no-active"}>
+                    <a>الرئيسية</a>
+                   </Link>
             </Button>
             <Button variant='text'>
-                   <Link href="/about" style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/about" ? "active" : "no-active"}>من نحن</Link>
+                   <Link href="/about" style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/about" ? "active" : "no-active"}>
+                       <a> من نحن</a>
+                   </Link>
             </Button>
             <Button variant='text'>
-                   <Link href='/gallery' style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/gallery" ? "active" : "no-active"}>خدماتنا</Link>
+                   <Link href='/gallery' style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/gallery" ? "active" : "no-active"}>
+                    <a>خدماتنا</a>
+                   </Link>
             </Button>
             <Button variant='text'>
-                   <Link href='/blog' style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/blog" ? "active" : "no-active"}>المقالات</Link>
+                   <Link href='/blog' style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/blog" ? "active" : "no-active"}>
+                    <a>المقالات</a>
+                   </Link>
             </Button>
             <Button variant='text'>
-                   <Link style={{color : '#333',  width : '100%', height : '100%', }} href='/contact' className={currentRoute === "/contact" ? "active" : "no-active"}>اتصل بنا</Link>
+                   <Link style={{color : '#333',  width : '100%', height : '100%', }} href='/contact' className={currentRoute === "/contact" ? "active" : "no-active"}>
+                     <a>اتصل بنا</a>
+                   </Link>
             </Button>
          
       </>

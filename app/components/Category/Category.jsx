@@ -1,6 +1,6 @@
 "use client"
 import { Box, Button, Container, Grid, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { Suspense, useState } from 'react'
 import Slide from 'react-reveal/Slide';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -44,6 +44,7 @@ const Category = ({CategoryData}) => {
 
      const resultData = slug === "/" ? filterData.slice(0,6) : filterData
 
+     
     return (
     <>
     <Box sx={{ overflow : 'hidden'}} className='services'>
@@ -81,14 +82,18 @@ const Category = ({CategoryData}) => {
               <>
               <Grid item xs={12} lg={4} key={item.id}>
               
+           <Suspense fallback={<Loading/>}>
            <Slide bottom>
           <Box onClick={()=> router.push(`/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`)} sx={{display : 'flex', justifyContent : 'space-between', alignItems : 'baseline', flexDirection : 'column', position : 'relative', height : '380px'}}>
           <Image className='category-list' src={`${baseUrl}/images?id=${item.imageId}`} fill alt={item.name} style={{ border : '10px solid #fff', minHeight : '350px'}} loading='lazy' />
           </Box>
                 <Box>
-              <Link  style={{ textAlign : 'center', width : '100%' ,fontSize : '20px', fontWeight : 'bold', padding : '20px'}} className='category-link' href={`/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`}>{item.name}</Link>
+              <Link  style={{ textAlign : 'center', width : '100%' ,fontSize : '20px', fontWeight : 'bold', padding : '20px'}} className='category-link' href={`/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`}>
+                <a>{item.name}</a>
+              </Link>
                 </Box>
               </Slide>
+           </Suspense>
             </Grid>
               </>
             )
@@ -102,7 +107,7 @@ const Category = ({CategoryData}) => {
                     sx={{width : '200px', fontSize : '25px', fontWeight : 'bold',backgroundColor : '#E60263', color : '#fff', margin : '0px 10px',
                     }} 
                       >
-                 المزيد
+                 <a>المزيد</a>
              </Button>
                </Box>
       </Container>
