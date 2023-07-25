@@ -1,13 +1,19 @@
 "use client"
 import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
-import NewsCarsoul from './NewsCarsoul'
+const NewsCarsoul = dynamic(() => import('./NewsCarsoul'));
 import { Slide } from 'react-reveal'
 
 const LatestNews = ({data}) => {
+   const [loadingComponent , setLoadingComponent] = useState(true);
+   useEffect(()=>{
+     setLoadingComponent(false)
+   },[])
+
   return (
    <>
-   <Box component={'section'} sx={{height : '130vh', overflow : 'hidden'}} className='services'>
+     {loadingComponent ? null:
+      <Box component={'section'} sx={{height : '130vh', overflow : 'hidden'}} className='services'>
       <div className='top-wave'></div>
       <div className='overlay'>
          <div className='category-content'> 
@@ -30,6 +36,7 @@ const LatestNews = ({data}) => {
          <div className='bottom-wav'></div>
       </div>
     </Box>
+     }
    </>
   )
 }

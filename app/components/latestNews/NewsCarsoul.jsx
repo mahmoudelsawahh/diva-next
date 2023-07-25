@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { baseUrl } from '@/app/lib/baseUrl';
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
+import { Suspense } from "react";
 const Loading = dynamic(() => import('@/loading'));
 
 
@@ -57,22 +58,28 @@ const NewsCarsoul = ({data}) => {
         {data ? 
           dataItems.map((item)=>{
             return (
+          <>
+          <Suspense fallback={<Loading/>}>
             <Card  key={item.id} onClick={()=> router.push(`/blog/${item.name.replace(/\s+/g, '-')}?id=${item.id}`)}>
                 <CardActionArea>
                 <CardMedia >
                     <Image  src={`${baseUrl}/images?id=${item.imageId}`} height={350} width={350} alt={item.name} style={{ objectFit: 'cover', width : "100%" }} loading='lazy' />
                 </CardMedia>
             <CardContent sx={{height : '300px', overflow : 'hidden', margin : '5px 0px'}}>
-            <div className='api-blog-data' dangerouslySetInnerHTML={{__html: item.description}}/>
+              <Suspense fallback={<Loading/>}>
+                <div className='api-blog-data' dangerouslySetInnerHTML={{__html: item.description}}/>
+              </Suspense>
             </CardContent>
             </CardActionArea>
             <CardActions sx={{display : 'flex', justifyContent : 'center', padding : '20px 0px'}}>
             <Button size="large" sx={{backgroundColor : '#555555', color : '#fff', fontWeight : 'bold', padding : '10px 25px', ":hover" : {backgroundColor : '#555555'}}}>اقرأ المزيد</Button> 
             </CardActions>
             </Card>
+            </Suspense>
+          </>
             )
         })
-        : <Loading/>}
+        : null}
       </Slider>
       </>
     </>

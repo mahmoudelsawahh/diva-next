@@ -10,7 +10,9 @@ const AboutUs = dynamic(() => import('./components/home-page/AboutUs'));
 const Goals = dynamic(() => import('./components/Goals/Goals'));
 // const Category = dynamic(() => import('./components/Category/Category'));
 import {getArticleData, getCategoryData } from './lib/DataFetching';
-const LatestNews = dynamic(() => import('./components/latestNews/LatestNews'));
+const LatestNews = dynamic(() => import('./components/latestNews/LatestNews'),{
+  loading : ()=> <Loading/>
+});
 const InstagramBanner = dynamic(() => import('./components/InstagramBanner/InstagramBanner'));
 const Distinguishes = dynamic(() => import('./components/Distinguishes/Distinguishes'));
 // const DevaStudioVideo = dynamic(() => import('./components/DevaStudioVideo/DevaStudioVideo'))
