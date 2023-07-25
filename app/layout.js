@@ -1,6 +1,6 @@
 "use client"
-import './globals2.css'
 import './globals.css'
+import './globals2.css'
 import { Cairo } from 'next/font/google'
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { useEffect, useState } from 'react';
@@ -43,6 +43,8 @@ export default function RootLayout({ children }) {
   useEffect(()=>{
       setLoadingComponent(false)
   },[])
+
+  
   return (
     <html lang="ar">
          <head>  
@@ -82,6 +84,7 @@ export default function RootLayout({ children }) {
       <meta name="twitter:site" content="@divanice" />
       <meta name="twitter:domain" content="divanice" />
       <meta name="twitter:creator" content="@divanice" />
+
      </head>
       <body className={cairo.className}>
        <ThemeProvider theme={theme}>

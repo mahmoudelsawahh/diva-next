@@ -1,8 +1,9 @@
 "use client"
-import WhyUs from './whyUs'
-import AboutIframe from './AboutIframe'
 import { Fade, Container, Grid } from '@/app/lib/MuiSsr';
 import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+const WhyUs = dynamic(() => import('./WhyUs'));
+const AboutIframe = dynamic(() => import('./AboutIframe'));
 
 const AboutUs = () => {
   const [loadingComponent , setLoadingComponent] = useState(true);

@@ -8,15 +8,17 @@ const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarouse
 });
 const AboutUs = dynamic(() => import('./components/home-page/AboutUs'));
 const Goals = dynamic(() => import('./components/Goals/Goals'));
-// const Category = dynamic(() => import('./components/Category/Category'));
-// import {getArticleData, getCategoryData } from './lib/DataFetching';
+const Category = dynamic(() => import('./components/Category/Category'));
+import {getArticleData, getCategoryData } from './lib/DataFetching';
 // const LatestNews = dynamic(() => import('./components/latestNews/LatestNews'));
 const InstagramBanner = dynamic(() => import('./components/InstagramBanner/InstagramBanner'));
 const Distinguishes = dynamic(() => import('./components/Distinguishes/Distinguishes'));
 
+
 export default async function Home () {
   // const data = await getArticleData();
-  // const CategoryData = await getCategoryData();
+  const CategoryData = await getCategoryData();
+  
   return (
     <>
         <HomeCarousel/>
@@ -26,9 +28,9 @@ export default async function Home () {
         <section>
             <Goals/>
         </section>
-        {/* <section>
+        <section>
         <Category CategoryData={CategoryData.data}/>
-        </section> */}
+        </section>
         <section>
         <Distinguishes/>
         </section>

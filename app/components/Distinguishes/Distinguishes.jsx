@@ -1,7 +1,5 @@
 "use client"
-import { Box, Container, Grid, Typography } from '@mui/material'
-import React from 'react'
-import { Slide } from 'react-reveal'
+import { Box, Container, Grid, Typography , Slide} from '@/app/lib/MuiSsr'
 
 const data = [
     {

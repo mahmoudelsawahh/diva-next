@@ -1,7 +1,8 @@
 "use client"
-import RightGoals from './RightGoals'
 import { Fade , Reveal , Container, Grid, Typography} from '@/app/lib/MuiSsr';
+import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
+const RightGoals = dynamic(() => import('./RightGoals'));
 
 const Goals = () => {
   const [loadingComponent , setLoadingComponent] = useState(true);

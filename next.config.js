@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  swcMinify: true,
     images: {
       remotePatterns: [
         {
@@ -31,9 +32,8 @@ const nextConfig = {
         transform: '@material-ui/icons/{{ matches.[1] }}/{{member}}'
       }
     },
-  
+
   }
   
   module.exports = nextConfig
-  
   
