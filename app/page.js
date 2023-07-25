@@ -8,18 +8,16 @@ const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarouse
 });
 const AboutUs = dynamic(() => import('./components/home-page/AboutUs'));
 const Goals = dynamic(() => import('./components/Goals/Goals'));
-const Category = dynamic(() => import('./components/Category/Category'),{
-  loading : ()=> <Loading/>
-});
+// const Category = dynamic(() => import('./components/Category/Category'));
 import {getArticleData, getCategoryData } from './lib/DataFetching';
-// const LatestNews = dynamic(() => import('./components/latestNews/LatestNews'));
+const LatestNews = dynamic(() => import('./components/latestNews/LatestNews'));
 const InstagramBanner = dynamic(() => import('./components/InstagramBanner/InstagramBanner'));
 const Distinguishes = dynamic(() => import('./components/Distinguishes/Distinguishes'));
-
+// const DevaStudioVideo = dynamic(() => import('./components/DevaStudioVideo/DevaStudioVideo'))
 
 export default async function Home () {
-  // const data = await getArticleData();
-  const CategoryData = await getCategoryData();
+  const data = await getArticleData();
+  // const CategoryData = await getCategoryData();
   
   return (
     <>
@@ -30,15 +28,18 @@ export default async function Home () {
         <section>
             <Goals/>
         </section>
-        <section>
+         {/* <section>
+               <DevaStudioVideo/>
+            </section> */}
+        {/* <section>
         <Category CategoryData={CategoryData.data}/>
-        </section>
+        </section> */}
         <section>
         <Distinguishes/>
         </section>
-        {/* <section>
+        <section>
             <LatestNews data={data}/>
-           </section> */}
+           </section>
             <section className='instagram-banner'>
               <InstagramBanner/>
             </section>

@@ -12,7 +12,6 @@ const LatestNews = ({data}) => {
       <div className='overlay'>
          <div className='category-content'> 
          <Container maxWidth="xxl" fixed>
-
           <Slide left>
              <Typography variant='subtitle1' sx={{textAlign : 'center', color : '#E60263', fontSize : '20px', fontWeight : 'bold'}}>احدث اخبار ديفا</Typography>
           </Slide>
