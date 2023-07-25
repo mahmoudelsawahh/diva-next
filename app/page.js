@@ -1,12 +1,21 @@
 import dynamic from 'next/dynamic';
-const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarousel'));
+const Loading = dynamic(() => import('@/loading'),{
+  ssr : false,
+});
+const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarousel'),{
+  ssr : false,
+  loading : ()=> <Loading/>
+});
 const AboutUs = dynamic(() => import('./components/home-page/AboutUs'));
 const Goals = dynamic(() => import('./components/Goals/Goals'));
 // const Category = dynamic(() => import('./components/Category/Category'));
 // import {getArticleData, getCategoryData } from './lib/DataFetching';
 // const LatestNews = dynamic(() => import('./components/latestNews/LatestNews'));
 const InstagramBanner = dynamic(() => import('./components/InstagramBanner/InstagramBanner'));
-const Distinguishes = dynamic(() => import('./components/Distinguishes/Distinguishes'));
+const Distinguishes = dynamic(() => import('./components/Distinguishes/Distinguishes'),{
+  ssr : false,
+  loading : ()=> <Loading/>
+});
 
 export default async function Home () {
   // const data = await getArticleData();
