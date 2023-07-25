@@ -2,7 +2,7 @@
 import { Fade, Container, Grid } from '@/app/lib/MuiSsr';
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
-const WhyUs = dynamic(() => import('./WhyUs'));
+import WhyUs from './whyUs';
 const AboutIframe = dynamic(() => import('./AboutIframe'));
 
 const AboutUs = () => {
