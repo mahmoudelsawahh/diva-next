@@ -6,25 +6,13 @@ const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarouse
   ssr : false,
   loading : ()=> <Loading/>
 });
-const AboutUs = dynamic(() => import('./components/home-page/AboutUs'),{
-  ssr : false,
-  loading : ()=> <Loading/>
-});
-const Goals = dynamic(() => import('./components/Goals/Goals'),{
-  ssr : false,
-  loading : ()=> <Loading/>
-});
+const AboutUs = dynamic(() => import('./components/home-page/AboutUs'));
+const Goals = dynamic(() => import('./components/Goals/Goals'));
 // const Category = dynamic(() => import('./components/Category/Category'));
 // import {getArticleData, getCategoryData } from './lib/DataFetching';
 // const LatestNews = dynamic(() => import('./components/latestNews/LatestNews'));
-const InstagramBanner = dynamic(() => import('./components/InstagramBanner/InstagramBanner'),{
-  ssr : false,
-  loading : ()=> <Loading/>
-});
-const Distinguishes = dynamic(() => import('./components/Distinguishes/Distinguishes'),{
-  ssr : false,
-  loading : ()=> <Loading/>
-});
+const InstagramBanner = dynamic(() => import('./components/InstagramBanner/InstagramBanner'));
+const Distinguishes = dynamic(() => import('./components/Distinguishes/Distinguishes'));
 
 export default async function Home () {
   // const data = await getArticleData();
