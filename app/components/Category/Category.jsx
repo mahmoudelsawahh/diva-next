@@ -1,4 +1,5 @@
 "use client"
+import dynamic from 'next/dynamic';
 import { Box, Button, Container, Grid, Typography, Slide } from '@/app/lib/MuiSsr'
 import React, { useState } from 'react'
 import Image from 'next/image';
@@ -6,7 +7,6 @@ import Link from 'next/link';
 import { baseUrl } from '@/app/lib/baseUrl';
 import { useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import dynamic from 'next/dynamic';
 const Loading = dynamic(() => import('@/loading'),{
   ssr : false
 });

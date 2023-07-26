@@ -1,10 +1,10 @@
 "use client"
+import dynamic from 'next/dynamic'
 import { Box, Container, Typography } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Slide } from 'react-reveal'
 import { baseUrl } from '@/app/lib/baseUrl'
-import dynamic from 'next/dynamic'
 const Loading = dynamic(() => import('@/loading'),{
   ssr : false
 });

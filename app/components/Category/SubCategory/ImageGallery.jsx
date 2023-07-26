@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 /* eslint-disable @next/next/no-img-element */
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
@@ -7,7 +8,6 @@ import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
 import { baseUrl } from '@/app/lib/baseUrl';
-import dynamic from 'next/dynamic'
 const Loading = dynamic(() => import('@/loading'),{
   ssr : false
 });

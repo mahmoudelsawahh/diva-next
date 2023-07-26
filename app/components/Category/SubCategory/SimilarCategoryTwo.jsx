@@ -1,9 +1,9 @@
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Slider from 'react-slick';
 import { Box, Container, Typography } from '@mui/material';
 import Link from 'next/link';
 import { Slide } from 'react-reveal';
-import dynamic from 'next/dynamic'
 const Loading = dynamic(() => import('@/loading'),{
   ssr : false
 });

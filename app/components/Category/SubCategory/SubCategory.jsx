@@ -1,4 +1,5 @@
 "use client"
+import dynamic from 'next/dynamic'
 import { Box, Grid, Typography } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
@@ -18,7 +19,6 @@ const SubCategory = ({data}) => {
                 <Grid item xs={12} sx={{display : {xs : 'block', lg : 'none'}}}>
                      <Image loading='lazy' src={`${baseUrl}/images?id=${data.imageId}`} className='category-photo' layout='fill' alt={data.ame}/>
                   </Grid>
-
                   <Grid item xs={12} lg={6} xl={7}>
                   <Typography variant='h1' sx={{fontSize : '24px', marginBottom : '30px',textAlign : 'center', width : {xs : '100%', lg : '85%'}, lineHeight : '50px'}}>{data.name}</Typography>
                   <div className='api-blog-data api-category-data' dangerouslySetInnerHTML={{__html: data.description}}/>
