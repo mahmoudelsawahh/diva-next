@@ -1,8 +1,5 @@
+import {  Button, CardActionArea, CardActions, Card , CardContent , CardMedia } from '@/app/lib/MuiSsr';
 import Slider from "react-slick";
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import { Button, CardActionArea, CardActions } from '@mui/material';
 import Image from 'next/image';
 import { baseUrl } from '@/app/lib/baseUrl';
 import { useRouter } from "next/navigation";
@@ -76,7 +73,7 @@ const NewsCarsoul = ({data}) => {
             </div>
             )
         })
-        : null}
+        : <Loading/>}
       </Slider>
     </>
   )
