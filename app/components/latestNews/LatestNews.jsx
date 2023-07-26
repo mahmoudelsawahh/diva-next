@@ -25,14 +25,14 @@ const LatestNews = ({data}) => {
           <Slide right>
               <Typography variant='h1' sx={{textAlign : 'center', fontSize : '40px', fontWeight : 'bold', position : 'relative'}} className='category-title'>احدث اخبار الموضة والجمال</Typography>
           </Slide>
- <Box sx={{margin : '80px 0px'}}>
+         <Box sx={{margin : '80px 0px'}}>
     
        <Slide left>
           <NewsCarsoul data={data}/>
        </Slide>
    
- </Box>
-</Container>
+         </Box>
+      </Container>
          </div>
          <div className='bottom-wav'></div>
       </div>
