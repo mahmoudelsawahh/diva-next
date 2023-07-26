@@ -13,17 +13,14 @@ const AboutUs = () => {
   return (
    <>
     {loadingComponent ? null :
-      
      <Container maxWidth="xxl" fixed>
         <Grid container rowSpacing={0} sx={{flexDirection : {xs : 'column-reverse', md : 'row'}}}>
             <Grid item xs={12} md={6} >
-                
                 <Fade left>
                     <WhyUs/>
                  </Fade>
             </Grid>
             <Grid item xs={12} md={6}>
-              
               <Fade right>
                 <AboutIframe/>
               </Fade>

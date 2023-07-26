@@ -13,6 +13,7 @@ const Loading = dynamic(() => import('@/loading'));
 
 const NewsCarsoul = ({data}) => {
   const router = useRouter()
+  const dataItems = data.data
       const settings = {
         dots: true,
         infinite: true,
@@ -53,8 +54,8 @@ const NewsCarsoul = ({data}) => {
   return (
     <>
         <Slider {...settings} className='mainSlider'>
-        {data ? 
-          data.data.map((item)=>{
+        {dataItems ? 
+          dataItems.map((item)=>{
             return (
             <div key={item.id}>
             <Card  onClick={()=> router.push(`/blog/${item.name.replace(/\s+/g, '-')}?id=${item.id}`)}>

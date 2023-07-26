@@ -19,6 +19,7 @@ const Distinguishes = dynamic(() => import('./components/Distinguishes/Distingui
 
 export default async function Home () {
   const data = await getArticleData();
+  console.log(data)
   // const CategoryData = await getCategoryData();
   return (
     <>
