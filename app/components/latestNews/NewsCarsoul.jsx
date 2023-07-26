@@ -53,14 +53,13 @@ const NewsCarsoul = ({data}) => {
       };
   return (
     <>
-  < >
         <Slider {...settings} className='mainSlider'>
-        {data ? 
+        {dataItems ? 
           dataItems.map((item)=>{
             return (
-          <>
+          <div key={item.id}>
           <Suspense fallback={<Loading/>}>
-            <Card  key={item.id} onClick={()=> router.push(`/blog/${item.name.replace(/\s+/g, '-')}?id=${item.id}`)}>
+            <Card onClick={()=> router.push(`/blog/${item.name.replace(/\s+/g, '-')}?id=${item.id}`)}>
                 <CardActionArea>
                 <CardMedia >
                     <Image  src={`${baseUrl}/images?id=${item.imageId}`} height={350} width={350} alt={item.name} style={{ objectFit: 'cover', width : "100%" }} loading='lazy' />
@@ -76,12 +75,11 @@ const NewsCarsoul = ({data}) => {
             </CardActions>
             </Card>
             </Suspense>
-          </>
+          </div>
             )
         })
         : null}
       </Slider>
-      </>
     </>
   )
 }
