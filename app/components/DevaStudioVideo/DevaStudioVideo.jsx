@@ -1,11 +1,16 @@
 "use client"
 import { Container, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from "react-slick";
 import Slide from 'react-reveal/Slide';
 import Image from 'next/image';
 import bgDiva from "/public/divanice.com_imgs_video-background.webp"
+import Loading from '@/loading';
 const DevaStudioVideo = () => {
+  const [loadingComponent , setLoadingComponent] = useState(true);
+  useEffect(()=>{
+    setLoadingComponent(false)
+  },[])
   const settings = {
     dots: true,
     infinite: true,
@@ -42,8 +47,24 @@ const DevaStudioVideo = () => {
         }
       ]
   };
+
+  const iframeSrc = [
+    {
+       src : "https://www.youtube.com/embed/RySyL5xKN7A"
+    },
+    {
+      src : "https://www.youtube.com/embed/IaLkcwBOmOk"
+   },
+   {
+    src : "https://www.youtube.com/embed/f5eQ9yZk3Vc"
+ },
+ {
+  src : "https://www.youtube.com/embed/98YGdA4LVjU"
+},
+  ]
   return (
-  
+   <>
+    {loadingComponent ? <Loading/> : 
     <div style={{position : 'relative', height : "950px", clipPath: 'inset(0 0 0 0)',}} className='deva-studio'>
       <Image src={bgDiva} alt='bgDiva' style={{position : 'fixed'}} objectFit='cover' />
       <div className='overlay'>
@@ -55,25 +76,15 @@ const DevaStudioVideo = () => {
 <div className='deva-studio-video'>
 <Slide left>
 <Slider {...settings}>
-  <div>
-  <iframe style={{border : '10px solid #fff'}}
-   className="main-frame" loading='lazy' src="https://www.youtube.com/embed/RySyL5xKN7A" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen=""></iframe>
- </div>
-   <div>
-  <iframe 
-    style={{border : '10px solid #fff'}}
-    className="main-frame" loading='lazy' src="https://www.youtube.com/embed/IaLkcwBOmOk" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen=""></iframe>        
-  </div>
-  <div>
-  <iframe 
-    style={{border : '10px solid #fff'}}
-    className="main-frame" loading='lazy' src="https://www.youtube.com/embed/f5eQ9yZk3Vc" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen=""></iframe>        
-  </div>
-  <div>
-  <iframe 
-    style={{border : '10px solid #fff'}}
-    className="main-frame" loading='lazy' src="https://www.youtube.com/embed/98YGdA4LVjU" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen=""></iframe>        
-  </div>
+   {iframeSrc.map((item , id)=>{
+    return (
+      <div key={id}>
+          <iframe style={{border : '10px solid #fff', borderRadius : '10px'}}
+          className="main-frame" loading='lazy' src={item.src}  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+    )
+   })}
+
 </Slider>
 </Slide>
 </div>
@@ -81,8 +92,8 @@ const DevaStudioVideo = () => {
 </Container>
       </div>
     </div>
-    
-
+    }
+   </>
   )
 }
 

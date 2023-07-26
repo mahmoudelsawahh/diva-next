@@ -14,8 +14,10 @@ const LatestNews = dynamic(() => import('./components/latestNews/LatestNews'),{
   loading : ()=> <Loading/>
 });
 const InstagramBanner = dynamic(() => import('./components/InstagramBanner/InstagramBanner'));
-const Distinguishes = dynamic(() => import('./components/Distinguishes/Distinguishes'));
-// const DevaStudioVideo = dynamic(() => import('./components/DevaStudioVideo/DevaStudioVideo'))
+const DevaStudioVideo = dynamic(() => import('./components/DevaStudioVideo/DevaStudioVideo'));
+const Distinguishes = dynamic(() => import('./components/Distinguishes/Distinguishes'),{
+  ssr : false,
+});
 
 export default async function Home () {
   const data = await getArticleData();
@@ -30,12 +32,12 @@ export default async function Home () {
         <section>
             <Goals/>
         </section>
-         {/* <section>
+          <section>
                <DevaStudioVideo/>
-            </section> */}
+            </section> 
         {/* <section>
         <Category CategoryData={CategoryData.data}/>
-        </section> */}
+        </section>  */}
         <section>
         <Distinguishes/>
         </section>
