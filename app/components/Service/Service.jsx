@@ -40,8 +40,8 @@ const Service = () => {
         
         <Container maxWidth="xxl"  sx={{textAlign : 'center'}}>
         <Slide bottom>
-              <Typography variant='h1' sx={{fontSize : '18px', fontWeight : 'bold' , color : '#E60263', marginBottom : '5px'}}>الخدمات المميزة</Typography>
-              <h1 style={{fontWeight : 'bold' , paddingBottom : '25px', position : 'relative', fontSize : '2.5rem'}} className='Service-title'>ما الذي نقدمه من خدمات ؟</h1>
+              <Typography variant='h1' sx={{fontSize : '14px', fontWeight : 'bold' , color : '#E60263', marginBottom : '5px'}}>الخدمات المميزة</Typography>
+              <h1 style={{fontWeight : 'bold' , paddingBottom : '25px', position : 'relative', fontSize : '2rem'}} className='Service-title'>ما الذي نقدمه من خدمات ؟</h1>
         </Slide>
         <Grid container spacing={3}>
             {serviceData.map((item , id)=>{
@@ -52,7 +52,7 @@ const Service = () => {
                        <Slide bottom>
                              <Typography variant='h4' sx={{fontWeight : 'bold' , margin : '20px 0px' ,textAlign : 'center', fontSize : '1.5rem'}}>{item.title}</Typography>
                        </Slide>
-                        <Typography  sx={{fontSize : '22px', margin : 'auto', lineHeight : '40px', width : '90%', fontWeight : 500}}>{item.description}</Typography>
+                        <Typography  sx={{fontSize : '18px', margin : 'auto', lineHeight : '40px', width : '90%', fontWeight : 500}}>{item.description}</Typography>
                        </Fade>
                     </Grid>
                 )

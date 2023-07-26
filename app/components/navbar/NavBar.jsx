@@ -83,7 +83,7 @@ export default function DrawerAppBar(props) {
 
       <CssBaseline />
       <AppBar sx={{position: 'fixed'}}>
-        <Container maxWidth="xxl" fixed>
+        <Container maxWidth="lg" fixed>
         <Toolbar sx={{flexDirection : {xs : 'row-reverse', md : 'row'}}}>
           <IconButton
             color="inherit"
@@ -97,9 +97,9 @@ export default function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Box sx={{ flexGrow: 1 , display: { xs: 'flex', sm: 'block' }, justifyContent : 'flex-start' , padding : {xs : '5px' , md :'12px'}, cursor : 'pointer'
+          <Box sx={{ flexGrow: 1 , display: { xs: 'flex', sm: 'block' }, justifyContent : 'flex-start' ,  cursor : 'pointer'
            }}>
-                  <div style={{width : '90px', position : 'relative', height : '76px'}}>
+                  <div style={{width : '90px', position : 'relative', height : '76px', padding : '5px'}}>
                   <Image priority={true} layout="responsive" onClick={()=> router.push('/')} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
                   </div>
           </Box>

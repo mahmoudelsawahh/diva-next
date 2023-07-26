@@ -8,7 +8,7 @@ export async function getCategoryData() {
         "Access-Control-Allow-Headers" : "X-Custom-Header, Upgrade-Insecure-Requests"
       }
     })
-    // Recommendation: handle errors
+    // Recommendation: handle errors 
     if (!res.ok) {
       // This will activate the closest `error.js` Error Boundary
       return <Loading/>

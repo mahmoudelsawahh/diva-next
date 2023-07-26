@@ -44,12 +44,12 @@ input, label{
   overflow: hidden;
 }
 button a{
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   margin: 0px 10px;
 }
 button a.active{
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .slick-next:before, .slick-prev:before{

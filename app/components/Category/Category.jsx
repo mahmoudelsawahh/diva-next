@@ -1,7 +1,6 @@
 "use client"
-import { Box, Button, Container, Grid, Typography } from '@mui/material'
+import { Box, Button, Container, Grid, Typography, Slide } from '@/app/lib/MuiSsr'
 import React, { useState } from 'react'
-import Slide from 'react-reveal/Slide';
 import Image from 'next/image';
 import Link from 'next/link';
 import { baseUrl } from '@/app/lib/baseUrl';
@@ -57,7 +56,7 @@ const Category = ({CategoryData}) => {
  <Slide right>
  <Typography  variant='h1' sx={{textAlign : 'center', fontSize : '40px', fontWeight : 'bold', position : 'relative'}} className='category-title'>من اهم مايميزنا هو معرضنا</Typography>
 
- </Slide>
+ </Slide> 
   <Slide right>
   <Box sx={{display : 'flex', justifyContent : 'center', alignItems : 'center', margin : '70px 0px'}} >
      {data.map((item)=>{
