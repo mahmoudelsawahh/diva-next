@@ -23,7 +23,7 @@ const SubBlogContent = ({data}) => {
                     <Typography sx={{padding : '40px 0px', fontWeight : 'bold'}} variant='h4'>{data.name}</Typography>
                </Slide>
                <Slide bottom>
-                  <div className='api-blog-data' dangerouslySetInnerHTML={{__html: data.description}}/>
+                  {/* <div className='api-blog-data' dangerouslySetInnerHTML={{__html: data.description}}/> */}
                </Slide>
                </Box>
                : <Loading/>

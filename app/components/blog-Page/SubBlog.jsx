@@ -24,7 +24,7 @@ const SubBlog = ({data}) => {
                          <Image src={`${baseUrl}/images?id=${item.imageId}`} width={350} height={350} alt="" style={{ objectFit: 'cover', width : "100%" }}/>
                  </CardMedia>
                  <CardContent sx={{height : '300px', overflow : 'hidden', margin : '5px 0px'}}>
-                  <div className='api-blog-data' dangerouslySetInnerHTML={{__html: item.description}}/>
+                  {/* <div className='api-blog-data' dangerouslySetInnerHTML={{__html: item.description}}/> */}
                  </CardContent>
                </CardActionArea>
                   <CardActions sx={{margin : '0px 10px'}}>
