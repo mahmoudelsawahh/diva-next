@@ -55,7 +55,7 @@ const NewsCarsoul = ({data}) => {
           dataItems.map((item)=>{
             return (
             <div key={item.id}>
-            <Card  onClick={()=> router.push(`/blog/${item.name.replace(/\s+/g, '-')}?id=${item.id}`)}>
+            <Card onClick={()=> router.push(`/blog/${item.id}/${item.name.split(' ').join('-')}`)}>
                 <CardActionArea>
                 <CardMedia >
                     <Image  src={`${baseUrl}/images?id=${item.imageId}`} height={350} width={350} alt={item.name} style={{ objectFit: 'cover', width : "100%" }} loading='lazy' />
@@ -67,7 +67,9 @@ const NewsCarsoul = ({data}) => {
             </CardContent>
             </CardActionArea>
             <CardActions sx={{display : 'flex', justifyContent : 'center', padding : '20px 0px'}}>
-            <Button size="large" sx={{backgroundColor : '#555555', color : '#fff', fontWeight : 'bold', padding : '10px 25px', ":hover" : {backgroundColor : '#555555'}}}>اقرأ المزيد</Button> 
+            <Button size="large" sx={{backgroundColor : '#555555', color : '#fff', fontWeight : 'bold', padding : '10px 25px', ":hover" : {backgroundColor : '#555555'}}}
+              onClick={()=> router.push(`/blog/${item.id}/${item.name.split(' ').join('-')}`)}
+            >اقرأ المزيد</Button> 
             </CardActions>
             </Card>
             </div>

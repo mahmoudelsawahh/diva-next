@@ -28,7 +28,9 @@ const SubBlog = ({data}) => {
                  </CardContent>
                </CardActionArea>
                   <CardActions sx={{margin : '0px 10px'}}>
-                      <Button size="large" sx={{backgroundColor : '#555555', color : '#fff', fontWeight : 'bold', padding : '10px 25px', ":hover" : {backgroundColor : '#555555'}}}>اقرأ المزيد</Button> 
+                      <Button size="large" sx={{backgroundColor : '#555555', color : '#fff', fontWeight : 'bold', padding : '10px 25px', ":hover" : {backgroundColor : '#555555'}}}
+                      onClick={()=> router.push(`/blog/${item.id}/${item.name.split(' ').join('-')}`)}
+                      >اقرأ المزيد</Button> 
                 </CardActions>
               </Card>
             </Slide>
