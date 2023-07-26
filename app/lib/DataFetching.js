@@ -5,7 +5,7 @@ export async function getCategoryData() {
     const res = await fetch(`${baseUrl}/rest/tables.article/getPosts`,{
       cache : 'force-cache',
       headers : {
-        "Access-Control-Allow-Headers: X-Custom-Header, Upgrade-Insecure-Requests"
+        "Access-Control-Allow-Headers" : "X-Custom-Header, Upgrade-Insecure-Requests"
       }
     })
     // Recommendation: handle errors
