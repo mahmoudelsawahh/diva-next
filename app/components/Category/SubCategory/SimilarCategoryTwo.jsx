@@ -7,7 +7,7 @@ import { Slide } from 'react-reveal';
 const Loading = dynamic(() => import('@/loading'),{
   ssr : false
 });
-import { baseUrl } from '@/app/lib/baseUrl';
+import { baseUrl, mainUrl } from '@/app/lib/baseUrl';
 const SimilarCategoryTwo = ({data}) => {
     const settings = {
         dots: true,
@@ -62,7 +62,7 @@ const SimilarCategoryTwo = ({data}) => {
                             src={`${baseUrl}/images?id=${item.imageId}`}
                              alt={item.name} layout='fill'/>
                               <Link style={{textDecoration : 'underline', fontSize : '20px', textAlign : 'center'}}  
-                              href={`/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`}> {item.name} </Link>
+                              href={`${mainUrl}/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`}> {item.name} </Link>
                        </Box>
                         </>
                     )

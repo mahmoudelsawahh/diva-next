@@ -44,7 +44,7 @@ const Footer = () => {
       <Box sx={{padding : '0px 20px'}}>
       <Grid container sx={{alignItems : 'center'}}>
         <Grid item xs={12} xl={3} sx={{display : 'flex', flexDirection : 'column', justifyContent : 'center', alignItems : 'center'}}>
-             <Image src={Logo} onClick={()=> router.push('/')} alt='ديفا' width={250} style={{marginBottom : '20px'}} loading='lazy'/>
+             <Image src={Logo} onClick={()=> router.push(`${mainUrl}`)} alt='ديفا' width={250} style={{marginBottom : '20px'}} loading='lazy'/>
           <Typography variant='body1' sx={{color : '#808080', lineHeight : '40px', fontSize : '20px', textAlign : 'center'}}>
               بإدارة مدام ديفا يسمح لك ديفا بإظهار جمالك الخاص وإطلاق العنان لشخصيتك الفريدة بغض النظر عن عمرك عن طريق إستخدام فن المكياج المحترف. وهو أكثر من مجرد إستخدام منتجات ذات جودة عالية. تتميز منتجات &quot; ديفا &quot; بألوانها الثابتة والأجمل أنها مموجة أي تعطيكي ألوان جديدة ومميزة ولها لمعة مميزة جداً وناعمة جداً على البشرة . مهمتنا هي تشجيعك على إستكشاف جوانب في شخصيتك وجمالك بطرق مختلفة لم تكتشفيها من قبل. لدينا مجموعة كبيرة من الألوان والإستايلات لخلق تأثيرات فريدة من نوعها تبرز جمالك وتعكس شخصيتك.
         </Typography>

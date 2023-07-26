@@ -4,7 +4,7 @@ import { Box, Button, Container, Grid, Typography, Slide } from '@/app/lib/MuiSs
 import React, { useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
-import { baseUrl } from '@/app/lib/baseUrl';
+import { baseUrl, mainUrl } from '@/app/lib/baseUrl';
 import { useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 const Loading = dynamic(() => import('@/loading'),{
@@ -82,7 +82,7 @@ const Category = ({CategoryData}) => {
           <Box onClick={()=> router.push(`/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`)} sx={{display : 'flex', justifyContent : 'space-between', alignItems : 'baseline', flexDirection : 'column', position : 'relative', height : '380px'}}>
           <Image className='category-list' src={`${baseUrl}/images?id=${item.imageId}`} fill alt={item.name} style={{ border : '10px solid #fff', minHeight : '350px'}} loading='lazy' />
           </Box>
-              <Link  style={{ textAlign : 'center', width : '100%' ,fontSize : '20px', fontWeight : 'bold', padding : '20px'}} className='category-link' href={`/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`}>{item.name}</Link>
+              <Link  style={{ textAlign : 'center', width : '100%' ,fontSize : '20px', fontWeight : 'bold', padding : '20px'}} className='category-link' href={`${mainUrl}/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`}>{item.name}</Link>
               </Slide>
             </Grid>
               </>
@@ -93,7 +93,7 @@ const Category = ({CategoryData}) => {
       </Grid>
                <Box sx={{display : slug === "/" ? "flex": "none", flexDirection : 'column', alignItems : 'center', margin : '50px 0px'}}>
                  <Button 
-                 onClick={()=> router.push(`/gallery`)} variant='contained' 
+                 onClick={()=> router.push(`${mainUrl}/gallery`)} variant='contained' 
                     sx={{width : '200px', fontSize : '25px', fontWeight : 'bold',backgroundColor : '#E60263', color : '#fff', margin : '0px 10px',
                     }} 
                       >

@@ -9,6 +9,7 @@ import {AppBar , Box  , CssBaseline , Divider , Drawer, IconButton ,
   List , ListItem, Toolbar , Button , Container
 } from '@/app/lib/MuiSsr';
 import { useState } from 'react';
+import { mainUrl } from '@/app/lib/baseUrl';
 
 const drawerWidth = 240;
 export default function DrawerAppBar(props) {
@@ -26,27 +27,27 @@ export default function DrawerAppBar(props) {
       <>
          
          <Button variant='text'>
-                   <Link href="/" style={{color : '#333', width : '100%', height : '100%', }} className={currentRoute === "/" ? "active" : "no-active"}>
+                   <Link href={`${mainUrl}`} style={{color : '#333', width : '100%', height : '100%', }} className={currentRoute === "/" ? "active" : "no-active"}>
                     الرئيسية 
                    </Link>
             </Button>
             <Button variant='text'>
-                   <Link href="/about" style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/about" ? "active" : "no-active"}>
+                   <Link href={`${mainUrl}/about`} style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/about" ? "active" : "no-active"}>
                         من نحن
                    </Link>
             </Button>
             <Button variant='text'>
-                   <Link href='/gallery' style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/gallery" ? "active" : "no-active"}>
+                   <Link href={`${mainUrl}/gallery`} style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/gallery" ? "active" : "no-active"}>
                     خدماتنا
                    </Link>
             </Button>
             <Button variant='text'>
-                   <Link href='/blog' style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/blog" ? "active" : "no-active"}>
+                   <Link href={`${mainUrl}/blog`} style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/blog" ? "active" : "no-active"}>
                     المقالات
                    </Link>
             </Button>
             <Button variant='text'>
-                   <Link style={{color : '#333',  width : '100%', height : '100%', }} href='/contact' className={currentRoute === "/contact" ? "active" : "no-active"}>
+                   <Link style={{color : '#333',  width : '100%', height : '100%', }} href={`${mainUrl}/contact`} className={currentRoute === "/contact" ? "active" : "no-active"}>
                      اتصل بنا
                    </Link>
             </Button>
@@ -61,7 +62,7 @@ export default function DrawerAppBar(props) {
                  {/* <Image  onClick={()=> router.push('/')} src={Logo} alt='اتيليه فساتين زفاف وافراح' width={'300'} priority/> */}
                  <div>
                    <div style={{position : 'relative', padding : '10px 60px'}}>
-                   <Image priority={true} layout="responsive" onClick={()=> router.push('/')} style={{width : '100%',}} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
+                   <Image priority={true} layout="responsive" onClick={()=> router.push(`${mainUrl}`)} style={{width : '100%',}} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
                    </div>
                   </div>
       <Divider />
@@ -100,7 +101,7 @@ export default function DrawerAppBar(props) {
           <Box sx={{ flexGrow: 1 , display: { xs: 'flex', sm: 'block' }, justifyContent : 'flex-start' ,  cursor : 'pointer'
            }}>
                   <div style={{width : '90px', position : 'relative', height : '76px', padding : '5px'}}>
-                  <Image priority={true} layout="responsive" onClick={()=> router.push('/')} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
+                  <Image priority={true} layout="responsive" onClick={()=> router.push(`${mainUrl}`)} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
                   </div>
           </Box>
 

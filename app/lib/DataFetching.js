@@ -34,7 +34,7 @@ export async function getCategoryData() {
     const res = await fetch(`${baseUrl}/rest/tables.article/getArticleDetails`,{
       method : 'POST',
       body : JSON.stringify({"id" : param}),
-      cache : 'force-cache'
+      cache : 'force-cache',
 
   })
   
@@ -51,8 +51,10 @@ export async function getCategoryData() {
     const res = await fetch(`${baseUrl}/rest/tables.article/getPostDetails`,{
       method : 'POST',
       body : JSON.stringify({"id" : param}),
-      cache : 'force-cache'
-
+      cache : 'force-cache',
+      headers : {
+        "Access-Control-Allow-Headers" : "X-Custom-Header, Upgrade-Insecure-Requests"
+      } 
   })
   
     // Recommendation: handle errors

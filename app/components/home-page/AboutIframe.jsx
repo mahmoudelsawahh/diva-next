@@ -1,8 +1,6 @@
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import { useRouter } from 'next/navigation';
 import { Box, Button, Typography } from '@/app/lib/MuiSsr';
-import { Suspense } from 'react';
-import Loading from '@/loading';
 
 
 const AboutIframe = () => {

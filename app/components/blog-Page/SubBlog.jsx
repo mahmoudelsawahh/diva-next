@@ -2,7 +2,7 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { baseUrl } from '@/app/lib/baseUrl';
+import { baseUrl, mainUrl } from '@/app/lib/baseUrl';
 const Loading = dynamic(() => import('@/loading'),{
   ssr : false,
 });
@@ -18,7 +18,7 @@ const SubBlog = ({data}) => {
             return (
       <Grid item xs={12} md={6} lg={4} key={item.id}>
             <Slide bottom>
-              <Card onClick={()=> router.push(`/blog/${item.id}/${item.name.split(' ').join('-')}`)}>
+              <Card onClick={()=> router.push(`${mainUrl}/blog/${item.id}/${item.name.split(' ').join('-')}`)}>
                  <CardActionArea>
                      <CardMedia >
                          <Image src={`${baseUrl}/images?id=${item.imageId}`} width={350} height={350} alt="" style={{ objectFit: 'cover', width : "100%" }}/>
@@ -29,7 +29,7 @@ const SubBlog = ({data}) => {
                </CardActionArea>
                   <CardActions sx={{margin : '0px 10px'}}>
                       <Button size="large" sx={{backgroundColor : '#555555', color : '#fff', fontWeight : 'bold', padding : '10px 25px', ":hover" : {backgroundColor : '#555555'}}}
-                      onClick={()=> router.push(`/blog/${item.id}/${item.name.split(' ').join('-')}`)}
+                      onClick={()=> router.push(`${mainUrl}/blog/${item.id}/${item.name.split(' ').join('-')}`)}
                       >اقرأ المزيد</Button> 
                 </CardActions>
               </Card>
