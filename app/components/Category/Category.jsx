@@ -36,7 +36,6 @@ const Category = ({CategoryData}) => {
     ]
 
     useEffect(()=>{
-        
         {getId === 1 ? setFilterData(weddingData) : getId === 2 ?  setFilterData(celebritiesData) : setFilterData(engagementData)} 
      },[getId, celebritiesData , engagementData , weddingData])
 

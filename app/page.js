@@ -8,9 +8,8 @@ const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarouse
 });
 const AboutUs = dynamic(() => import('./components/home-page/AboutUs'));
 const Goals = dynamic(() => import('./components/Goals/Goals'));
-import {getArticleData } from './lib/DataFetching';
-const CategoryData = dynamic(() => import('./components/Category/CategoryData'),{
-});
+const Category = dynamic(() => import('./components/Category/Category'));
+import {getArticleData, getCategoryData } from './lib/DataFetching';
 const LatestNews = dynamic(() => import('./components/latestNews/LatestNews'),{
   loading : ()=> <Loading/>
 });
@@ -22,6 +21,7 @@ const Distinguishes = dynamic(() => import('./components/Distinguishes/Distingui
 
 export default async function Home () {
   const data = await getArticleData();
+  const CategoryData = await getCategoryData();
   return (
     <>
         <HomeCarousel/>
@@ -35,7 +35,7 @@ export default async function Home () {
                <DevaStudioVideo/>
             </section>  */}
         <section>
-        <CategoryData/>
+        <Category CategoryData={CategoryData.data}/>
         </section> 
         <section>
         <Distinguishes/>
