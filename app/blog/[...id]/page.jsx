@@ -3,9 +3,11 @@ import { Container, Grid } from '../../lib/MuiSsr'
 import {getBlogData } from '@/app/lib/DataFetching'
 
 const SimilarBlog = dynamic(() => import('@/app/components/blog-Page/sub-blog/SimilarBlog'), {
+  
 })
  
 const SubBlogContent = dynamic(() => import('@/app/components/blog-Page/sub-blog/SubBlogContent'), {
+
 })
  
 const SubBlogTitle = dynamic(() => import('@/app/components/blog-Page/sub-blog/SubBlogTitle'), {

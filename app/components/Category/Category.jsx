@@ -80,14 +80,11 @@ const Category = ({CategoryData}) => {
             return (
               <>
               <Grid item xs={12} lg={4} key={item.id}>
-              
            <Slide bottom>
           <Box onClick={()=> router.push(`/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`)} sx={{display : 'flex', justifyContent : 'space-between', alignItems : 'baseline', flexDirection : 'column', position : 'relative', height : '380px'}}>
           <Image className='category-list' src={`${baseUrl}/images?id=${item.imageId}`} fill alt={item.name} style={{ border : '10px solid #fff', minHeight : '350px'}} loading='lazy' />
           </Box>
-                <Box>
               <Link  style={{ textAlign : 'center', width : '100%' ,fontSize : '20px', fontWeight : 'bold', padding : '20px'}} className='category-link' href={`/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`}>{item.name}</Link>
-                </Box>
               </Slide>
             </Grid>
               </>

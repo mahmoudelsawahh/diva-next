@@ -1,7 +1,13 @@
 import dynamic from 'next/dynamic';
-const ContactTitle = dynamic(() => import('../components/ContactPage/ContactTitle'));
-const FormWrapper = dynamic(() => import('../components/ContactPage/FormWrapper'));
-const InstagramBanner = dynamic(() => import('../components/InstagramBanner/InstagramBanner'));
+const ContactTitle = dynamic(() => import('../components/ContactPage/ContactTitle'),{
+  ssr : false
+});
+const FormWrapper = dynamic(() => import('../components/ContactPage/FormWrapper'),{
+  ssr : false
+});
+const InstagramBanner = dynamic(() => import('../components/InstagramBanner/InstagramBanner'),{
+  ssr : false
+});
 
 const Contact = () => {
   return (
