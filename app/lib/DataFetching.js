@@ -3,6 +3,7 @@ import { baseUrl } from "./baseUrl"
 
 export async function getCategoryData() {
     const res = await fetch(`${baseUrl}/rest/tables.article/getPosts`,{
+      cache : 'force-cache'
     })
     // Recommendation: handle errors
     if (!res.ok) {
@@ -15,6 +16,7 @@ export async function getCategoryData() {
 
   export async function getArticleData() {
     const res = await fetch(`${baseUrl}/rest/tables.article/getArticlesPojo`,{
+      cache : 'force-cache'
     })
     // Recommendation: handle errors
     if (!res.ok) {
