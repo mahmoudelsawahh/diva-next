@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 const ContactTitle = dynamic(() => import('../components/ContactPage/ContactTitle'));
 const FormWrapper = dynamic(() => import('../components/ContactPage/FormWrapper'));
 const InstagramBanner = dynamic(() => import('../components/InstagramBanner/InstagramBanner'));
@@ -5,7 +6,7 @@ const InstagramBanner = dynamic(() => import('../components/InstagramBanner/Inst
 const Contact = () => {
   return (
       <>
-          {/* <section className='contact'>
+          <section className='contact'>
             <ContactTitle/>
           </section>
           <section className='email-form'>
@@ -13,7 +14,7 @@ const Contact = () => {
           </section>
           <section>
             <InstagramBanner/>
-          </section> */}
+          </section>
       </>
   )
 }
