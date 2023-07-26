@@ -1,6 +1,7 @@
 "use client"
 import { Box, Container, Typography } from '@mui/material'
-import React from 'react'
+import dynamic from 'next/dynamic';
+import { useState , useEffect } from 'react';
 const NewsCarsoul = dynamic(() => import('./NewsCarsoul'));
 import { Slide } from 'react-reveal'
 

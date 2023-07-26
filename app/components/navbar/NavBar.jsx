@@ -27,27 +27,27 @@ export default function DrawerAppBar(props) {
          
          <Button variant='text'>
                    <Link href="/" style={{color : '#333', width : '100%', height : '100%', }} className={currentRoute === "/" ? "active" : "no-active"}>
-                    <a>الرئيسية</a>
+                    الرئيسية 
                    </Link>
             </Button>
             <Button variant='text'>
                    <Link href="/about" style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/about" ? "active" : "no-active"}>
-                       <a> من نحن</a>
+                        من نحن
                    </Link>
             </Button>
             <Button variant='text'>
                    <Link href='/gallery' style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/gallery" ? "active" : "no-active"}>
-                    <a>خدماتنا</a>
+                    خدماتنا
                    </Link>
             </Button>
             <Button variant='text'>
                    <Link href='/blog' style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/blog" ? "active" : "no-active"}>
-                    <a>المقالات</a>
+                    المقالات
                    </Link>
             </Button>
             <Button variant='text'>
                    <Link style={{color : '#333',  width : '100%', height : '100%', }} href='/contact' className={currentRoute === "/contact" ? "active" : "no-active"}>
-                     <a>اتصل بنا</a>
+                     اتصل بنا
                    </Link>
             </Button>
          
