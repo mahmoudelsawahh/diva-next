@@ -7,9 +7,13 @@ const SubBlog = dynamic(() => import('../components/blog-Page/SubBlog'), {
 })
 const InstagramBanner = dynamic(() => import('../components/InstagramBanner/InstagramBanner'), {
 })
+
+export const metadata = {
+  title: "اتيليه فساتين زفاف وافراح",
+}
+
 export default async function Blog (){
   const data = await getArticleData();
-
   return (
    <>
      <section className='blog-title'>

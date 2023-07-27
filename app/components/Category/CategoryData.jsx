@@ -1,16 +1,10 @@
-"use client"
-import Loading from '@/loading'
 import dynamic from 'next/dynamic';
-import useSWR from 'swr'
+import { getCategoryData } from '../../lib/DataFetching';
 const Category = dynamic(() => import('./Category'),{
   ssr : false
 });
-const fetcher = (...args) => fetch(...args).then(res => res.json())
-export default  function CategoryData () {
-  const { data, error, isLoading } = useSWR('https://api.divanice.com/rest/tables.article/getPosts', fetcher)
-  if (error) return <div><Loading/></div>
-  if (isLoading) return <div><Loading/></div>
-
+export default async function CategoryData () {
+  const data = await getCategoryData()
   return (
     <>
       <Category CategoryData={data.data}/>

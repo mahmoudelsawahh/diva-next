@@ -22,6 +22,10 @@ const InstagramBanner = dynamic(() => import('./components/InstagramBanner/Insta
 // });
 const Distinguishes = dynamic(() => import('./components/Distinguishes/Distinguishes'));
 
+export const metadata = {
+  title: "اتيليه فساتين زفاف وافراح",
+}
+
 export default async function Home () {
   const data = await getArticleData();
   return (

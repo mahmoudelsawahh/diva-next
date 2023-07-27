@@ -9,6 +9,10 @@ const InstagramBanner = dynamic(() => import('../components/InstagramBanner/Inst
   ssr : false
 });
 
+export const metadata = {
+  title: "اتيليه فساتين زفاف وافراح",
+}
+
 const Contact = () => {
   return (
       <>

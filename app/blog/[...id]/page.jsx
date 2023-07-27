@@ -1,13 +1,11 @@
 import dynamic from 'next/dynamic'
 import { Container, Grid } from '../../lib/MuiSsr' 
 import {getBlogData } from '@/app/lib/DataFetching'
-
+const InstagramBanner = dynamic(() => import('@/app/components/InstagramBanner/InstagramBanner'));
 const SimilarBlog = dynamic(() => import('@/app/components/blog-Page/sub-blog/SimilarBlog'), {
-  
 })
  
 const SubBlogContent = dynamic(() => import('@/app/components/blog-Page/sub-blog/SubBlogContent'), {
-
 })
  
 const SubBlogTitle = dynamic(() => import('@/app/components/blog-Page/sub-blog/SubBlogTitle'), {
@@ -39,6 +37,7 @@ export default async function  BlogId ({params}) {
               </section>
          </Grid>
       </Grid>
+      <InstagramBanner/>
     </Container>
   </section>
   )

@@ -1,16 +1,16 @@
-"use client"
-import Loading from '@/loading'
 import dynamic from 'next/dynamic';
-import useSWR from 'swr'
 const Category = dynamic(() => import('../components/Category/Category'),{
   ssr : false
 });
-const fetcher = (...args) => fetch(...args).then(res => res.json())
-export default  function Gallery () {
-  const { data, error, isLoading } = useSWR('https://api.divanice.com/rest/tables.article/getPosts', fetcher)
-  if (error) return <div><Loading/></div>
-  if (isLoading) return <div><Loading/></div>
+import { getCategoryData } from '../lib/DataFetching';
 
+export const metadata = {
+  title: "اتيليه فساتين زفاف وافراح",
+}
+
+
+export default async  function Gallery () {
+  const data = await getCategoryData()
   return (
     <>
       <Category CategoryData={data.data}/>
