@@ -1,11 +1,13 @@
-import {  Button, CardActionArea, CardActions, Card , CardContent , CardMedia } from '@/app/lib/MuiSsr';
+import {  Button, CardActionArea, CardActions, Card , CardContent , CardMedia, Container } from '@/app/lib/MuiSsr';
 import Slider from "react-slick";
 import Image from 'next/image';
 import { baseUrl, mainUrl } from '@/app/lib/baseUrl';
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
-const Loading = dynamic(() => import('@/loading'));
+const Loading = dynamic(() => import('@/loading'),{
+  ssr : false
+});
 
 
 const NewsCarsoul = ({data}) => {
@@ -49,7 +51,7 @@ const NewsCarsoul = ({data}) => {
           ]
       };
   return (
-    <>
+    <Container maxWidth="lg">
         <Slider {...settings} className='mainSlider'>
         {dataItems ? 
           dataItems.map((item)=>{
@@ -58,16 +60,16 @@ const NewsCarsoul = ({data}) => {
             <Card onClick={()=> router.push(`${mainUrl}/blog/${item.id}/${item.name.split(' ').join('-')}`)}>
                 <CardActionArea>
                 <CardMedia >
-                    <Image  src={`${baseUrl}/images?id=${item.imageId}`} height={350} width={350} alt={item.name} style={{ objectFit: 'cover', width : "100%" }} loading='lazy' />
+                    <Image  src={`${baseUrl}/images?id=${item.imageId}`} height={200} width={250} alt={item.name} style={{ objectFit: 'cover', width : "100%" }} loading='lazy' />
                 </CardMedia>
-            <CardContent sx={{height : '300px', overflow : 'hidden', margin : '5px 0px'}}>
+            <CardContent sx={{height : '200px', overflow : 'hidden', margin : '5px 0px'}}>
               <Suspense fallback={<Loading/>}>
                 <div className='api-blog-data' dangerouslySetInnerHTML={{__html: item.description}}/>
               </Suspense>
             </CardContent>
             </CardActionArea>
             <CardActions sx={{display : 'flex', justifyContent : 'center', padding : '20px 0px'}}>
-            <Button size="large" sx={{backgroundColor : '#555555', color : '#fff', fontWeight : 'bold', padding : '10px 25px', ":hover" : {backgroundColor : '#555555'}}}
+            <Button aria-label='item.name' size="large" sx={{backgroundColor : '#555555', color : '#fff', fontWeight : 'bold', padding : '10px 25px', ":hover" : {backgroundColor : '#555555'}}}
               onClick={()=> router.push(`${mainUrl}/blog/${item.id}/${item.name.split(' ').join('-')}`)}
             >اقرأ المزيد</Button> 
             </CardActions>
@@ -77,7 +79,7 @@ const NewsCarsoul = ({data}) => {
         })
         : <Loading/>}
       </Slider>
-    </>
+    </Container>
   )
 }
 

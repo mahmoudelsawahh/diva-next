@@ -11,7 +11,7 @@ import { Slide , Button, Card, CardActionArea, CardActions, CardContent, CardMed
 const SubBlog = ({data}) => {
   const router = useRouter();
   return (
-          <Container maxWidth={'xxl'} fixed>
+          <Container maxWidth={'lg'} fixed>
          <Grid container spacing={3} >
          {data ?
           data.map((item)=>{
@@ -21,7 +21,7 @@ const SubBlog = ({data}) => {
               <Card onClick={()=> router.push(`${mainUrl}/blog/${item.id}/${item.name.split(' ').join('-')}`)}>
                  <CardActionArea>
                      <CardMedia >
-                         <Image src={`${baseUrl}/images?id=${item.imageId}`} width={350} height={350} alt="" style={{ objectFit: 'cover', width : "100%" }}/>
+                         <Image src={`${baseUrl}/images?id=${item.imageId}`} width={250} height={200} alt="" style={{ objectFit: 'cover', width : "100%" }}/>
                  </CardMedia>
                  <CardContent sx={{height : '300px', overflow : 'hidden', margin : '5px 0px'}}>
                   <div className='api-blog-data' dangerouslySetInnerHTML={{__html: item.description}}/>

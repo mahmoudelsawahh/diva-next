@@ -19,8 +19,8 @@ const SocialFooter = () => {
                 <IconButton type='button' title='btn-phoneNumber' onClick={()=> router.push('tel:01200001315')}>
                     <PhoneIcon 
                      sx={{fontSize : '50px', color : '#fff', borderRadius : '50%',
-                      textAlign : 'center', boxShadow : '2px 2px 3px #999', height : '60px',
-                       width : '60px', lineHeight : '50px', backgroundColor : '#379d00' ,border : '1px solid #379d00', padding : '10px', 
+                      textAlign : 'center', boxShadow : '2px 2px 3px #999', height : '50px',
+                       width : '50px', lineHeight : '50px', backgroundColor : '#379d00' ,border : '1px solid #379d00', padding : '10px', 
                        }}
 
                        />
@@ -31,8 +31,8 @@ const SocialFooter = () => {
                 <IconButton type='button' title='btn-whatsapp' onClick={()=> router.push('https://wa.me/+201200001315')}>
                     <WhatsAppIcon
                      sx={{fontSize : '50px', color : '#fff', borderRadius : '50%',
-                      textAlign : 'center', boxShadow : '2px 2px 3px #999', height : '60px',
-                       width : '60px', lineHeight : '50px', backgroundColor : '#379d00' ,border : '1px solid #379d00', padding : '10px'
+                      textAlign : 'center', boxShadow : '2px 2px 3px #999', height : '50px',
+                       width : '50px', lineHeight : '50px', backgroundColor : '#379d00' ,border : '1px solid #379d00', padding : '10px'
                        }}
 
                        />
@@ -43,8 +43,8 @@ const SocialFooter = () => {
                 <IconButton type='button' title='btn-massenger' onClick={()=> router.push('https://www.messenger.com/t/Divaniicce/')}>
                     <Image  src={massengerLogo} alt='massengerLogo' loading='lazy'
                     style={{fontSize : '50px', color : '#fff', borderRadius : '50%',
-                      textAlign : 'center', boxShadow : '2px 2px 3px #999', height : '60px',
-                       width : '60px', lineHeight : '50px', backgroundColor : '#007bff' ,border : '1px solid #007bff', padding : '10px'}}
+                      textAlign : 'center', boxShadow : '2px 2px 3px #999', height : '50px',
+                       width : '50px', lineHeight : '50px', backgroundColor : '#007bff' ,border : '1px solid #007bff', padding : '10px'}}
                     />
                 </IconButton>
             </li>

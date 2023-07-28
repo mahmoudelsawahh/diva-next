@@ -25,7 +25,7 @@ export default async function  BlogId ({params}) {
  
   return (
     <section className='sub-blog'>  
-    <Container maxWidth="xl" fixed >
+    <Container maxWidth="lg" fixed >
       <Grid container sx={{marginTop : '140px', display : 'flex', flexDirection : {xs : 'column-reverse', lg : 'row'}}}>
          <Grid item xs={12} lg={5}>
                <SimilarBlog data={data}/>

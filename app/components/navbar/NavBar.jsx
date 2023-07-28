@@ -26,28 +26,28 @@ export default function DrawerAppBar(props) {
     return (
       <>
          
-         <Button variant='text'>
-                   <Link href={`${mainUrl}`} style={{color : '#333', width : '100%', height : '100%', }} className={currentRoute === "/" ? "active" : "no-active"}>
+         <Button aria-label='مرحباً بكم في " ديفا " أتيليه وميك أب أستوديو' variant='text'>
+                   <Link aria-label='مركز تجميل عرائس وميك اب Diva' href={`${mainUrl}`} style={{color : '#333', width : '100%', height : '100%', }} className={currentRoute === "/" ? "active" : "no-active"}>
                     الرئيسية 
                    </Link>
             </Button>
-            <Button variant='text'>
-                   <Link href={`${mainUrl}/about`} style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/about" ? "active" : "no-active"}>
+            <Button aria-label='مرحباً بكم في " ديفا " أتيليه وميك أب أستوديو' variant='text'>
+                   <Link aria-label='مركز تجميل عرائس وميك اب Diva' href={`${mainUrl}/about`} style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/about" ? "active" : "no-active"}>
                         من نحن
                    </Link>
             </Button>
-            <Button variant='text'>
-                   <Link href={`${mainUrl}/gallery`} style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/gallery" ? "active" : "no-active"}>
+            <Button aria-label='مرحباً بكم في " ديفا " أتيليه وميك أب أستوديو' variant='text'>
+                   <Link aria-label='مركز تجميل عرائس وميك اب Diva' href={`${mainUrl}/gallery`} style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/gallery" ? "active" : "no-active"}>
                     خدماتنا
                    </Link>
             </Button>
-            <Button variant='text'>
-                   <Link href={`${mainUrl}/blog`} style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/blog" ? "active" : "no-active"}>
+            <Button aria-label='مرحباً بكم في " ديفا " أتيليه وميك أب أستوديو' variant='text'>
+                   <Link aria-label='مركز تجميل عرائس وميك اب Diva' href={`${mainUrl}/blog`} style={{color : '#333',  width : '100%', height : '100%', }} className={currentRoute === "/blog" ? "active" : "no-active"}>
                     المقالات
                    </Link>
             </Button>
-            <Button variant='text'>
-                   <Link style={{color : '#333',  width : '100%', height : '100%', }} href={`${mainUrl}/contact`} className={currentRoute === "/contact" ? "active" : "no-active"}>
+            <Button aria-label='مرحباً بكم في " ديفا " أتيليه وميك أب أستوديو' variant='text'>
+                   <Link aria-label='مركز تجميل عرائس وميك اب Diva' style={{color : '#333',  width : '100%', height : '100%', }} href={`${mainUrl}/contact`} className={currentRoute === "/contact" ? "active" : "no-active"}>
                      اتصل بنا
                    </Link>
             </Button>

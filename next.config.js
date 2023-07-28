@@ -32,6 +32,22 @@ const nextConfig = {
         transform: '@material-ui/icons/{{ matches.[1] }}/{{member}}'
       }
     },
+    webpack(config, { isServer }) {
+      if (!isServer) {
+        config.optimization.splitChunks.cacheGroups = {
+          ...config.optimization.splitChunks.cacheGroups,
+          '@sentry': {
+            test: /[\\/]node_modules[\\/](@sentry)[\\/]/,
+            name: '@sentry',
+            priority: 10,
+            reuseExistingChunk: false,
+          },
+        };
+      }
+    
+      return config;
+    },
+    
 
   }
   

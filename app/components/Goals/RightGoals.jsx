@@ -32,9 +32,9 @@ const RightGoals = () => {
                                    <IconButton component="span" sx={{marginLeft : '12px', color : '#000'}} size='large'>
                                         <KeyboardDoubleArrowDownIcon />
                                     </IconButton>
-                                <Typography variant='h1' sx={{marginBottom : '15px', fontSize : '2rem', fontWeight : 'bold'}}>{item.title}</Typography>
+                                <Typography variant='h4' sx={{marginBottom : '15px', fontSize : '1.8rem', fontWeight : 'bold'}}>{item.title}</Typography>
                             </Box>
-                         <Typography variant='body1' sx={{paddingRight : '25px',marginRight : '25px',  color : '#808080', fontWeight : 400 , lineHeight : '50px', fontSize : '30px'}}>
+                         <Typography variant='body1' sx={{paddingRight : '25px',marginRight : '25px',  color : '#808080', fontWeight : 400 , lineHeight : '30px', fontSize : '25px'}}>
                             {item.description}
                          </Typography>
                         </Fade>

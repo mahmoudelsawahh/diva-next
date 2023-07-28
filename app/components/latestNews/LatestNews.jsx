@@ -20,10 +20,10 @@ const LatestNews = ({data}) => {
          <div className='category-content'> 
          <Container maxWidth="xxl" fixed>
           <Slide left>
-             <Typography variant='subtitle1' sx={{textAlign : 'center', color : '#E60263', fontSize : '20px', fontWeight : 'bold'}}>احدث اخبار ديفا</Typography>
+             <Typography variant='subtitle1' sx={{textAlign : 'center', color : '#E60263', fontSize : '14px', fontWeight : 'bold'}}>احدث اخبار ديفا</Typography>
           </Slide>
           <Slide right>
-              <Typography variant='h1' sx={{textAlign : 'center', fontSize : '40px', fontWeight : 'bold', position : 'relative'}} className='category-title'>احدث اخبار الموضة والجمال</Typography>
+              <Typography variant='h1' sx={{textAlign : 'center', fontSize : '2rem', fontWeight : 'bold', position : 'relative'}} className='category-title'>احدث اخبار الموضة والجمال</Typography>
           </Slide>
          <Box sx={{margin : '80px 0px'}}>
     

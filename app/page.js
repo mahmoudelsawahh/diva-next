@@ -7,7 +7,9 @@ const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarouse
   ssr : false,
   loading : ()=> <Loading/>
 });
-const AboutUs = dynamic(() => import('./components/home-page/AboutUs'));
+const AboutUs = dynamic(() => import('./components/home-page/AboutUs'),{
+  ssr : false
+});
 const Goals = dynamic(() => import('./components/Goals/Goals'));
 import {getArticleData, getCategoryData } from './lib/DataFetching';
 const CategoryData = dynamic(() => import('./components/Category/CategoryData'),{
@@ -17,9 +19,9 @@ const LatestNews = dynamic(() => import('./components/latestNews/LatestNews'),{
   loading : ()=> <Loading/>
 });
 const InstagramBanner = dynamic(() => import('./components/InstagramBanner/InstagramBanner'));
-// const DevaStudioVideo = dynamic(() => import('./components/DevaStudioVideo/DevaStudioVideo'),{
-//   ssr : false,
-// });
+const DevaStudioVideo = dynamic(() => import('./components/DevaStudioVideo/DevaStudioVideo'),{
+  ssr : false,
+});
 const Distinguishes = dynamic(() => import('./components/Distinguishes/Distinguishes'));
 
 export const metadata = {
@@ -40,9 +42,9 @@ export default async function Home () {
         <section>
             <Goals/>
         </section>
-          {/* <section>
+          <section>
                <DevaStudioVideo/>
-            </section>  */}
+            </section> 
         <section>
         <CategoryData/>
         </section> 

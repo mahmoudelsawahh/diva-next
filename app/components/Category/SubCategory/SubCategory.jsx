@@ -2,7 +2,6 @@
 import dynamic from 'next/dynamic'
 import { Box, Grid, Typography } from '@mui/material'
 import Image from 'next/image'
-import React from 'react'
 import { baseUrl } from '@/app/lib/baseUrl'
 const SimilarCategoryTwo = dynamic(() => import('./SimilarCategoryTwo'));
 const SimilarCategory = dynamic(() => import('./SimilarCategory'));

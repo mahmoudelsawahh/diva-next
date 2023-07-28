@@ -8,7 +8,9 @@ const Loading = dynamic(() => import('@/loading'),{
   ssr : false
 });
 import { baseUrl, mainUrl } from '@/app/lib/baseUrl';
+import { useRouter } from 'next/navigation';
 const SimilarCategoryTwo = ({data}) => {
+  const router = useRouter()
     const settings = {
         dots: true,
         infinite: true,
@@ -58,7 +60,7 @@ const SimilarCategoryTwo = ({data}) => {
                     return (
                         <>
                         <Box sx={{ textAlign : 'center', margin : '0px 40px'}} key={item.id}>
-                            <Image className='category-slider-photo' 
+                            <Image onClick={()=> router.push(`${mainUrl}/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`)} className='category-slider-photo' 
                             src={`${baseUrl}/images?id=${item.imageId}`}
                              alt={item.name} layout='fill'/>
                               <Link style={{textDecoration : 'underline', fontSize : '20px', textAlign : 'center'}}  

@@ -25,10 +25,10 @@ const Distinguishes = () => {
         <Container maxWidth="xxl" fixed>
           
           <Slide right>
-             <Typography variant='subtitle1' sx={{textAlign : 'center', color : '#E60263', fontSize : '20px', fontWeight : 'bold'}}>ارقامنا اهم مايميزنا</Typography>
+             <Typography variant='subtitle1' sx={{textAlign : 'center', color : '#E60263', fontSize : '14px', fontWeight : 'bold'}}>ارقامنا اهم مايميزنا</Typography>
          </Slide>
           <Slide left>
-             <Typography variant='h1' sx={{textAlign : 'center', fontSize : '40px', fontWeight : 'bold', position : 'relative'}} className='category-title'> نحرص دائما علي ارضاء عملائنا </Typography>
+             <Typography variant='h1' sx={{textAlign : 'center', fontSize : '2rem', fontWeight : 'bold', position : 'relative'}} className='category-title'> نحرص دائما علي ارضاء عملائنا </Typography>
           </Slide>
           
          
@@ -40,8 +40,8 @@ const Distinguishes = () => {
                         <Grid item key={id} xs={12} md={3} sx={{textAlign : 'center', margin : {xs : '50px 0px', md : '0px'}}}>
                            
                               <Slide right>
-                                <Typography variant='h1' sx={{fontSize : '50px', color : '#E60263', marginBottom : '10px', fontWeight : 'bold'}}>{item.num}</Typography>
-                                <Typography variant='h1' sx={{fontSize : '25px', fontWeight : 'bold', color : '#808080'}}>{item.title}</Typography>
+                                <Typography variant='h1' sx={{fontSize : '40px', color : '#E60263', marginBottom : '10px', fontWeight : 'bold'}}>{item.num}</Typography>
+                                <Typography variant='h1' sx={{fontSize : '16px', fontWeight : 'bold', color : '#808080'}}>{item.title}</Typography>
                               </Slide>
                              
                         </Grid>
