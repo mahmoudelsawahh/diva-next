@@ -82,10 +82,11 @@ const DevaStudioVideo = () => {
    {iframeSrc.map((item , id)=>{
     return (
       <div key={id}>
-          <iframe style={{border : '10px solid #fff', borderRadius : '10px'}}
+          <iframe style={{border : '10px solid #fff', borderRadius : '10px'}} 
           className="main-frame" loading='lazy' src={item.src} 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
+        
            ></iframe>
       </div>
     )

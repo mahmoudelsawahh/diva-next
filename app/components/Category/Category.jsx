@@ -50,7 +50,7 @@ const Category = ({CategoryData}) => {
     }else{
       return setFilterData(engagementData)
     }
-  },[getId])
+  },[getId , CategoryData])
   return (
     <>
     <Box sx={{ overflow : 'hidden'}} className='services'>
